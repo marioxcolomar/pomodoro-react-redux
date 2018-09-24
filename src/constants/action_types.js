@@ -1,0 +1,4 @@
+export const COUNTER_ADD = 'COUNTER_ADD';
+export const COUNTER_DECREASE = 'COUNTER_DECREASE';
+export const TIMER_START = 'TIMER_START';
+export const TIMER_STOP = 'TIMER_STOP';
