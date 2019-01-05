@@ -1,28 +1,27 @@
 import React from 'react';
 import '../styles/App.css';
-import Break from './Break';
-import Work from './Work';
-import Header from './Header';
+import Timer from './Timer';
 import Clock from './Clock';
 
 const App = props => (
-  <div className="container text-center">
-    <Header />
-    <div className="row">
-      <Break
-        name={'break'}
+  <div className="container mt-5 mb-5 p-4 border rounded text-center">
+    <div className="d-flex">
+      <Timer
+        name='Break'
+        typeName={'break'}
         value={props.breakLength}
         addCounter={props.addCounter}
-        decreaseCounter={props.decreaseCounter} 
+        decreaseCounter={props.decreaseCounter}
       />
-      <Work
-        name={'session'}
+      <Timer
+        name='Work'
+        typeName={'work'}
         value={props.sessionLength}
         addCounter={props.addCounter}
-        decreaseCounter={props.decreaseCounter} 
+        decreaseCounter={props.decreaseCounter}
       />
     </div>
-    <Clock 
+    <Clock
       breakLength={props.breakLength}
       sessionLength={props.sessionLength} />
   </div>
